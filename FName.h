@@ -55,7 +55,6 @@ inline std::string Get_name(uint32_t ComparisonIndex) {
     }
 
     char name[256] = { 0 };
-    // Use new driver's read method
     for (int i = 0; i < nameLength * (isWide ? 2 : 1); i++) {
         name[i] = mem->read<char>(namePoolChunk + 2 + i);
     }
